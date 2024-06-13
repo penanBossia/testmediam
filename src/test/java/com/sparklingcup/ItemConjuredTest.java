@@ -13,14 +13,15 @@ class ItemConjuredTest {
 
     private static Stream<Arguments> itemsPropsAndResults() {
         return Stream.of(
-                Arguments.of(2, 6, List.of(4, 2, 0, 0))
+                Arguments.of(2, 6, List.of(4, 2, 0, 0)),
+                Arguments.of(2, 10, List.of(8, 6, 2, 0))
         );
     }
 
     @ParameterizedTest
     @MethodSource("itemsPropsAndResults")
     void updateQualityDayAfterDay(int sellInStart, int qualityStart, List<Integer> qualityValues) {
-        final Item item = new ItemConjured("ClassicItem", sellInStart, qualityStart);
+        final Item item = new ItemConjured("ConjuredItem", sellInStart, qualityStart);
         for (int i = 0; i < qualityValues.size(); i++) {
             item.updateQuality();
             assertEquals(sellInStart - i - 1, item.sellIn);

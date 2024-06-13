@@ -9,7 +9,7 @@ public class ItemConjured extends Item {
     public void updateQuality() {
         sellIn--;
 
-        int tempQuality = quality - 2;
+        int tempQuality = sellIn >= 0 ? quality - 2 : quality - 4;
         quality = Math.max(tempQuality, 0);
     }
 }
