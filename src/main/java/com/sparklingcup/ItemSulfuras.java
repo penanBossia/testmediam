@@ -1,8 +1,8 @@
 package com.sparklingcup;
 
 /**
- * Les items de type legendaire necessiterait un traitement particulier dans la mesure où ils n'ont pas de
- * date de péremption. Ce traitement aurait pu être facilement implémentés si les possibilités de modification de
+ * Un item de type legendaire necessiterait un traitement particulier dans la mesure où il n'a pas de
+ * date de péremption. Ce traitement aurait pu être facilement implémenté si les possibilités de modification de
  * la classe Item étaient plus étendues (étendre une autre classe par exemple)
  *
  * J'ai donc fait le choix d'une convention pour la date de péremption et d'overrider la méthode updateQuality avec un
