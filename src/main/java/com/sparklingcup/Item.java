@@ -14,9 +14,10 @@ public class Item {
     }
 
     public void updateQuality() {
+        this.sellIn--;
+
         int tempQuality = sellIn >= 0 ? quality - 1 : quality - 2;
         quality = Math.max(tempQuality, 0);
-        this.sellIn--;
     }
 
     @Override

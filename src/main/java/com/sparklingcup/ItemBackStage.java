@@ -7,6 +7,8 @@ public class ItemBackStage extends Item {
 
     @Override
     public void updateQuality() {
+        sellIn--;
+
         if (sellIn > 10) {
             quality++;
         } else if (sellIn > 6) {
@@ -16,6 +18,5 @@ public class ItemBackStage extends Item {
         } else {
             quality = 0;
         }
-        sellIn--;
     }
 }

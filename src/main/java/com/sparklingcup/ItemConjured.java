@@ -7,7 +7,9 @@ public class ItemConjured extends Item {
 
     @Override
     public void updateQuality() {
-        quality -= 2;
         sellIn--;
+
+        int tempQuality = quality - 2;
+        quality = Math.max(tempQuality, 0);
     }
 }

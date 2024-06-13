@@ -7,8 +7,9 @@ public class ItemAgedBrie extends Item {
 
     @Override
     public void updateQuality() {
+        sellIn--;
+
         int tempQuality = quality + 1;
         quality = Math.min(50, tempQuality);
-        sellIn--;
     }
 }
